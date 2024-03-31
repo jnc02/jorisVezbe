@@ -8,6 +8,14 @@ function podaciForme(){
     let polozen = document.querySelector("[name = polozio]");
     let greske = {};
 
+
+    console.log("Ocena:", ocena.value);
+    console.log("Datum izlaska:", datumIzlaska.value);
+    console.log("Broj indeksa:", brojIndeksa.value);
+    console.log("Rok:", rok.value);
+    console.log("Redni broj izlaska:", redniBrojIzlaska.value);
+    console.log("Polozen:", polozen.checked);
+
     // Validacija ocene
     let vrednostOcene = parseInt(ocena.value);
     if (isNaN(vrednostOcene) || vrednostOcene < 5 || vrednostOcene > 10) {
@@ -52,7 +60,7 @@ function podaciForme(){
     if (Object.keys(greske).length === 0) {
         // Formiranje JSON objekta ako su svi podaci validni
         let podaci = {
-            ocena: ocenaVrednost,
+            ocena: vrednostOcene,
             datumIzlaska: datumIzlaska.value,
             brojIndeksa: brojIndeksa.value,
             rok: rok.value,
@@ -76,9 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Pozivanje funkcije podaciForme() i dobijanje njenog rezultata
         let rezultat = podaciForme();
 
-        // Postavljanje rezultata u textarea element
-        let ispisPodatakaTextarea = document.getElementById('ispis');
-        ispisPodatakaTextarea.value = rezultat;
+        // Ako rezultat nije prazan string, prikaži ga u textarea elementu
+        if (rezultat !== "") {
+            let ispisPodatakaTextarea = document.getElementById('ispis');
+            ispisPodatakaTextarea.value = rezultat;
+        }
 
         // Resetovanje vrednosti polja forme na podrazumevane vrednosti
         document.querySelector('form').reset();
