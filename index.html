@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joris vezbe</title>
+</head>
+<body>
+    <form action="">
+        <label for="ocena">Ocena: </label>
+        <input type="number" name="ocena" min="5" max="10" step="1">
+        <br><br>
+
+        <label for="broj-indexa">Broje indeksa: </label>
+        <input type="number" placeholder="2022/0001">
+        <br><br>
+
+        <label for="br-izlaska-na-ispit">Redni broj izlaska na ispit: </label>
+        <select name="br-izlaska-na-ispit" id="br-izlaska">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <br><br>
+
+        <label for="datum">Datum izlaska na ispit: </label>
+        <input type="date" name="datum">
+        <br><br>
+
+        <label for="rok">Rok: </label>
+        <input type="radio" id="januar" name="rok" value="Januar">
+        <label for="januar">Januar</label>
+        <input type="radio" id="april" name="rok" value="April">
+        <label for="april">April</label>
+        <input type="radio" id="jun" name="rok" value="Jun">
+        <label for="jun">Jun</label>
+        <input type="radio" id="septembar" name="rok" value="Septembar">
+        <label for="septembar">Septembar</label>
+        <br><br>
+
+        <input type="checkbox" name="polozio">
+        <label for="polozio">Polozio/la</label>
+        <br><br>
+
+        <button>Posalji</button>
+
+
+    </form>
+</body>
+</html>
