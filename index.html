@@ -11,8 +11,8 @@
         <input type="number" name="ocena" min="5" max="10" step="1">
         <br><br>
 
-        <label for="broj-indexa">Broje indeksa: </label>
-        <input type="number" placeholder="2022/0001">
+        <label for="broj-indexa">Broj indeksa: </label>
+        <input type="text" name="broj-indexa" placeholder="2022/0001">
         <br><br>
 
         <label for="br-izlaska-na-ispit">Redni broj izlaska na ispit: </label>
@@ -43,9 +43,15 @@
         <label for="polozio">Polozio/la</label>
         <br><br>
 
-        <button>Posalji</button>
+        <button id="posalji">Posalji</button>
 
 
     </form>
+
+
+    <label for="ispis">Podaci forme</label>
+    <textarea name="ispis" id="ispis" cols="30" rows="10" readonly></textarea>
+
+    <script src="index.js"></script>
 </body>
 </html>
